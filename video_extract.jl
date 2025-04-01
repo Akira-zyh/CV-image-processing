@@ -58,7 +58,7 @@ out = cv2.VideoWriter("./data/output.mp4", fourcc, fps, (width, height), isColor
 
 
 fnum = cap.get(7) # get the total frame quanity of the video
-for i = 1:fnum 
+for i = 1:20 
     (ret, frame) = cap.read() # capture the frame 
     if !ret
         println("Can't receive frame(stream end?).Exiting...")
@@ -71,8 +71,8 @@ for i = 1:fnum
     out.write(frame) # write frames into output.mp4
 
     # Optional: generate jpg
-    # filename = path * string(lpad(i, 4, "0"), ".jpg")
-    # cv2.imwrite(filename, frame, [cv2.IMWRITE_JPEG_QUALITY, 95])
+    filename = path * string(lpad(i, 4, "0"), ".jpg")
+    cv2.imwrite(filename, frame, [cv2.IMWRITE_JPEG_QUALITY, 95])
 end
 
 # release the resources
