@@ -58,7 +58,7 @@ out = cv2.VideoWriter("./data/output.mp4", fourcc, fps, (width, height), isColor
 
 
 fnum = cap.get(7) # get the total frame quanity of the video
-for i = 1:20 
+for i = 1:fnum 
     (ret, frame) = cap.read() # capture the frame 
     if !ret
         println("Can't receive frame(stream end?).Exiting...")
