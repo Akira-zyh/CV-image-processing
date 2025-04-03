@@ -71,8 +71,8 @@ for i = 1:fnum
     out.write(frame) # write frames into output.mp4
 
     # Optional: generate jpg
-    filename = path * string(lpad(i, 4, "0"), ".jpg")
-    cv2.imwrite(filename, frame, [cv2.IMWRITE_JPEG_QUALITY, 95])
+    # filename = path * string(lpad(i, 4, "0"), ".jpg")
+    # cv2.imwrite(filename, frame, [cv2.IMWRITE_JPEG_QUALITY, 95])
 end
 
 # release the resources
