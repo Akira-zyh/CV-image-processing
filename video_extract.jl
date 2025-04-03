@@ -45,7 +45,7 @@ function extract(image)
 end
 
 
-cap = cv2.VideoCapture("data/project_video.mp4") # Capture the frame
+cap = cv2.VideoCapture("data/part1/project_video.mp4") # Capture the frame
 width = Int(cap.get(3)) # get video width value
 height = Int(cap.get(4)) # get video height value
 fps = cap.get(5) # get FPS value
@@ -54,7 +54,7 @@ path = "data/" # set storage path for "output.mp4"
 # Initialize writter by using HP4V encoder
 fourcc = cv2.VideoWriter_fourcc("m", "p", "4", "v")
 # Attention!!!---VideoWritter_fourcc function of this version of Julia probably does not support pass the argument like [*'mp4v']
-out = cv2.VideoWriter("./data/output.mp4", fourcc, fps, (width, height), isColor=true)
+out = cv2.VideoWriter("./data/part1/output.mp4", fourcc, fps, (width, height), isColor=true)
 
 
 fnum = cap.get(7) # get the total frame quanity of the video
