@@ -13,9 +13,6 @@ function contour_detected(frame)
     binary = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
         cv2.THRESH_BINARY_INV, 3, 5)
 
-    # 或者使用Otsu自动阈值方法
-    # _, binary = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
-
     # 形态学操作改善二值图像
     kernel_close = np.ones((7, 7), np.uint8)
     binary = cv2.morphologyEx(binary, cv2.MORPH_CLOSE, kernel_close, iterations=2)
