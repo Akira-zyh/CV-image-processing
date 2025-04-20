@@ -1,2 +1,2 @@
 # CV
-a CV projects
+a CV project
