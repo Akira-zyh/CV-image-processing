@@ -1,3 +1,4 @@
 {
-    "editor.fontFamily": "Maple Mono CN"
+    "editor.fontFamily": "Maple Mono CN",
+    "editor.fontSize": 15
 }
